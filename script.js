@@ -23,7 +23,7 @@ function createMyElement(tag, value="", classes="", id="") {
 // the above response is of type 'opaque' and cannot be accessed using frontend javascript
 //therefore I copied the response data from POSTMAN to dogFacts.json file
 
-const numOfFactsOnPage = 3;
+const numOfFactsOnPage = 4;
 var currPage = 1;
 var numOfFacts;
 var numOfPages;
@@ -98,7 +98,7 @@ function NextPage() {
   else {
     if(currPage+1 <= numOfPages) {
       var page = document.querySelector('#page'+currPage);
-      page.style.transform = "translateX(-110%)";
+      page.style.transform = "translateX(-200%)";
         currPage++;
     }
   }
@@ -119,7 +119,7 @@ function PrevPage() {
     if(currPage-1 > 0) {
       currPage--;
       var page = document.querySelector('#page'+currPage);
-        page.style.transform = "translateX(0%)";
+      page.style.transform = "translateX(0%)";
     }
   }
 }
